@@ -1,0 +1,9 @@
+.carousel-item > img
+{
+    height: 60vh;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+.w-25 {
+    width: 4%!important;
+}
