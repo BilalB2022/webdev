@@ -6,7 +6,7 @@ console.log(company);
 var username = "PARAPLUI";
 document.getElementById("username").innerText = username;
 
-var student1 = "Ali",
+var student1 = "Ali et",
   student2 = "Kelly";
 console.log(student1, student2);
 
