@@ -3,8 +3,16 @@ var company; //undifined
 console.log(company);
 company = "intec";
 console.log(company);
-var username = "PARAPLUI";
-document.getElementById("username").innerText = username;
+var username = document.getElementById("username");
+username.innerText = "sami";
+username.style.color = "red";
+
+const divi = document.createElement("div");
+const para = document.createElement("p");
+const textPara = document.createTextNode("Hi, i'm a paragraph");
+para.appendChild(textPara);
+divi.appendChild(para);
+username.after(divi);
 
 var student1 = "Ali et",
   student2 = "Kelly";
