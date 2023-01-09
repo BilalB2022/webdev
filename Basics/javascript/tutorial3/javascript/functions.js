@@ -27,3 +27,21 @@ const getSumOfNumbers = (n1,n2) => {
 }
 
 getSumOfNumbers(25,3)
+
+const serverNumber1 = () => {
+    return
+} 
+
+const serverNumber2 = () => {
+    return 2;
+}
+
+const result = serverNumber1 + serverNumber2
+console.log(result);
+
+const getFirstName = ()=> {
+    return 'Michael'
+}
+const lastName = ()=> {
+    return 'jackson'
+}
