@@ -60,18 +60,31 @@ console.log(arrayFromString);
 // 8. Split stringToAarray variable into an array called "arrayFromString". Print arrayFromString to the console.
 
 var letters ="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"; // convert it to array list
+let arrayFromLetters = letters.split(",")
+console.log(arrayFromLetters);
 
 // 9. Split letters variable into an array called "arrayFromLetters". Print arrayFromLetters to the console.
 
+
 var names = "john-jane-jim-jill-jack-jenny-jeremy-jasmine-jody-jen"; // convert it to array list
+let arrayFromNames = names.split("-")
+console.log(arrayFromNames);
 
 // 10. Split names variable into an array called "arrayFromNames". Print arrayFromNames to the console.
 
 var salary = 20023.45 // round it to two decimal places
 
+let roundedSalary = parseFloat(salary.toFixed(2))
+console.log(roundedSalary);
+
 // 11. Round salary variable to two decimal places and store it in a variable called "roundedSalary". Print roundedSalary to the console.
 
 var brutoSalary = 20000 // calculate the net salary (net salary is bruto salary - 20% tax)
+
+let tax = 20
+let takeFromBruto = (brutoSalary / 100) * tax
+let netSalary = brutoSalary - takeFromBruto 
+console.log(netSalary);
 
 // 12. Calculate the net salary (net salary is bruto salary - 20% tax) and store it in a variable called "netSalary". Print netSalary to the console.
 
