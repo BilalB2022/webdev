@@ -23,9 +23,10 @@ const info = {
     tel: '048779626' ,
     media : ["facebook", "twitter" , "github"],
     show :function() {
-        console.log(`Name: ${this.name}\nage: ${this.age}`);
+        // `Name: ${this.name}\nage: ${this.age}`;
+        return this
     }
 }
 
 info.show()
-// console.table(info);
+console.table(info.show())
