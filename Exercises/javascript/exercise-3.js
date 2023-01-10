@@ -4,6 +4,8 @@ var students=["John","Jane","Jim","Jill","Jack","Jenny","Jeremy","Jasmine","Jody
 
 // 1. Find the length of students array, and store it in a variable called "numberOfStudents".
 
+
+
 // 2. Find the first element of students array, and store it in a variable called "firstStudent".
 
 // 3. Find the last element of students array, and store it in a variable called "lastStudent".
