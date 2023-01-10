@@ -81,4 +81,4 @@ const printDay = (n1) => {
     return printDay
 }
 
-console.log(printDay(3));
+console.log(printDay());

@@ -4,24 +4,58 @@ var students=["John","Jane","Jim","Jill","Jack","Jenny","Jeremy","Jasmine","Jody
 
 // 1. Find the length of students array, and store it in a variable called "numberOfStudents".
 
-
+let numberOfStudents = students.length
+console.log(numberOfStudents);
 
 // 2. Find the first element of students array, and store it in a variable called "firstStudent".
 
+let firstStudent = students[0]
+console.log(firstStudent);
+
 // 3. Find the last element of students array, and store it in a variable called "lastStudent".
+
+let lastStudent = students[students.length-1]
+console.log(lastStudent);
 
 // 4. Find the middle element of students array, and store it in a variable called "middleStudent". Hint: If the length of the array is even there is no single middle element. In that case, find the two elements that are in the middle and store them in an array called "middleStudents".
 
+let middleStudent = []
+
+if (students.length %2 === 0) {
+    middleStudent.push(students[(students.length)/2])
+    middleStudent.push(students[((students.length)/2)-1])
+} 
+
+console.log(middleStudent);
 
 var ages=[18,35,12,24];
 
 // 5. Find the first element of ages array, and store it in a variable called "firstAge".
 
+let firstAge = ages[0]
+
+console.log(firstAge);
+
 // 6. Find the last element of ages array, and store it in a variable called "lastAge".
+
+let lastAge = ages[ages.length-1]
+console.log(lastAge);
 
 // 7. Find the middle element of ages array, and store it in a variable called "middleAge". Hint: If the length of the array is even there is no single middle element. In that case, find the two elements that are in the middle and store them in an array called "middleAges".
 
+let middleAge = []
+
+if (ages.length %2 === 0) {
+    middleAge.push(ages[(ages.length)/2])
+    middleAge.push(ages[((ages.length)/2)-1])
+}
+
+console.log(middleAge);
+
 var stringToAarray = "Split me into an array";
+
+let arrayFromString = stringToAarray.split("") 
+console.log(arrayFromString);
 
 // 8. Split stringToAarray variable into an array called "arrayFromString". Print arrayFromString to the console.
 
