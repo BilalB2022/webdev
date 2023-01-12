@@ -3,9 +3,22 @@
 // odd or even
 // 1. Create a for loop that counts from 0 to 20. Console log the value of the counter variable inside the loop.
 
+for (let i = 0 ; i < 21 ; i++ ) {
+    console.log(`number ${i}`);
+}
+
 // 2. Create a for loop that counts from 20 to 0. Console log the value of the counter variable inside the loop.
 
+for (let i = 20 ; i > -1 ; i-- ) {
+    console.log(`number ${i}`);
+}
+
 // 3. Create a for loop that counts from 0 to 100. If the current iteration is an even number, console log "Even".
+
+for (let i = 0; i < 101 ; i++) {
+    i %2 === 0 ? console.log(`${i} is even`) : console.log(`${i} is odd`);
+}
+    
 
 var students =[
     {
