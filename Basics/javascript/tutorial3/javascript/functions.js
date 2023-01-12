@@ -47,7 +47,7 @@
 // }
 
 ///////////////////////////////////////////////////////////////////////////////
-const output = document.getElementById('output')
+// const output = document.getElementById('output')
 
 // const add = () => {
 //     return `Test value`
@@ -57,20 +57,54 @@ const output = document.getElementById('output')
 
 // output.innerHTML = "<h1>ufdshudsfudsfiuhfds</h1>"
 
-let users = []
+// let users = []
 
-const createAccoount = (username,password,email,role) => {
+// const createAccoount = (username,password,email,role) => {
+//     const obj = {
+//         user: username,
+//         pass: password,
+//         email: email,
+//         App_Role: role
+//     }
+//     return users.push(obj)
+// }
+
+// createAccoount('beki','berry5','carry@hotmail.be','master' )
+// createAccoount('corri','ornito78','ornito@live.be','teamleader')
+// createAccoount('polo','paragraphe78','polotarri8@live.be', 'customers')
+
+// console.log(users);
+
+// let users = []
+
+// const sendAndSaveObj = (obj) => {
+//     // this function save userdata in database 
+//     // console.log(obj);
+//     return users.push(obj)
+// }
+// const makeAccount = (obj) => {
+//     // this will take user object data 
+//     return sendAndSaveObj(obj)
+// }
+
+// const user1 = ({
+//     user: 'root'
+// })
+// makeAccount({
+//     user: 'root'
+// })
+//  console.log(users);
+
+let arr = []
+const newContact = (name,phone,email) => {
     const obj = {
-        user: username,
-        pass: password,
-        email: email,
-        App_Role: role
+        name: name,
+        phone: phone,
+        email: email
     }
-    return users.push(obj)
+    return arr.push(obj)
 }
 
-createAccoount('beki','berry5','carry@hotmail.be','master' )
-createAccoount('corri','ornito78','ornito@live.be','teamleader')
-createAccoount('polo','paragraphe78','polotarri8@live.be', 'customers')
 
-console.log(users);
+users('Billy','04895235','ajyfkz@live.be')
+console.log(arr);

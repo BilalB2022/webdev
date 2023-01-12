@@ -55,8 +55,14 @@ var students =[
 ]
 
 
+
 // find max points and print student name
 // 4. Create a for loop that iterates through the students array and finds the student with the highest amount of points. Console log the value of their name.
+for (let i = 1; i < students.length; i++ ) {
+    if () {
+        
+    }
+}
 
 
 // 5. define a function called "print" that takes a parameter called "student". The function should console log the value of the student's name, track, achievements and points.
