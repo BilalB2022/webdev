@@ -74,3 +74,60 @@ students.forEach(function(value,index){
 
 console.log(`Result is\n${result}\ntypeof data is ${typeof result}`)
 // console.log(students[12]);
+
+// map()
+
+students = ['Ahmed','Mohamed' ,'Ali', 'Mehmed' , 'Arisha']
+
+result = students.map(function(name){
+    return name
+})
+
+
+// filter()
+
+let scores = [33,44,55,66,77,88,99,33]
+
+// result = scores.filter(scores => {
+//     return scores > 100
+// })
+
+const allStudents = [{
+        name:'John',
+        score:44
+    },
+    {
+        name:'Jimmy',
+        scores:55
+    },
+    {
+        name:'Michael',
+        scores:66
+    },
+    {
+        name:'Megan',
+        scores:77
+    }
+]
+
+// result = allStudents.filter((student) => {
+//     return student.scores > 50
+// })
+
+// reduce()
+
+result = scores.reduce((acc,val,init) => {
+    console.log(`${acc} accu ${val} value init is ${init}`);
+    return acc+val
+})
+
+// includes()
+
+result = scores.includes(44)
+
+// indexOf()
+
+result = scores.indexOf(33,2
+    )
+
+console.log(result);

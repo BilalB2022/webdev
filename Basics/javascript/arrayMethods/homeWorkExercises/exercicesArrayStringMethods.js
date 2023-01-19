@@ -10,14 +10,14 @@ function ConvertLettersToUtf16(str){ //
     let arr = str.split("") // string method
     const encoded= []
     // loop the array forEach() // array method
-    arr.forEach(function(letter){
+    arr.forEach((letter) => {
         encoded.push(letter.charCodeAt())
     })
     return encoded
 }
 
 
-// console.log(ConvertLettersToUtf16(letters));
+console.log(ConvertLettersToUtf16(letters));
 
 // 2. write a function that converts utf-16 to letters
 
