@@ -51,6 +51,7 @@ students.push("Michael")
 // students.splice(5,3);
 result = students
 
+
 // slice
 let newArrayList = students.slice(4,7);
 result = newArrayList
@@ -63,7 +64,7 @@ result = students.sort()
 console.log(result);
 
 var numbers = [5,8,22,44,788,22,0,2,1];
-result = numbers.sort(function(x,y){
+result = numbers.sort((x,y) => {
     return x-y
 })
 
