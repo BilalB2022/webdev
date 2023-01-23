@@ -15,4 +15,5 @@ var n4 = "5" // string
 // console.log(n1!=n2) // true
 
 // not equal operator with duble equal symbol (!==) // control value control type
-console.log(n1!==n4)
+// console.log(n1!==n4)
+
