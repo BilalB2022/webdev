@@ -25,6 +25,6 @@ console.log(6>5);
 console.log(n3<n2);
 
 const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-const map1 = numbers.map(number => {
-    console.log(number %2 === 0 ? "it is even number" : "odd number"); 
+const filterNum = numbers.map(number => {
+    number %2 === 0 ? console.log(`number ${number} is even`) : console.log(`number ${number} is odd`);
 })
