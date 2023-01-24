@@ -21,7 +21,11 @@ var persons =
     }, {
         "username": "dbleby9"
     }]
-
+    
+    let container = []
     persons.map((singlePerson) => {
-        console.log(singlePerson.username.includes('employee'));
+        singlePerson.username.includes('employee')? container.push(singlePerson.username) : null;
     })
+
+    
+    console.log(container);
