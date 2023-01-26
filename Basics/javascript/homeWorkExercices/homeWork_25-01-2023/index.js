@@ -3,6 +3,9 @@
 // Note: 3 of objects email should be @gmail.com and 3 of objects email @yandex.com and 4 of objects email should be @hotmail.com
 // Note: 3 of objects city should be Brussel and 3 of objects city should be Istanbul and 4 of objects city should be Ghent
 
+///// Usefull Website for generate array data's \\\\\\
+//  https://www.mockaroo.com/
+
 /*
  name: string
  age: number
@@ -10,7 +13,7 @@
  city: string
  phone: string
 */
-let persons = [
+let users = [
   {
     name: "Chloe",
     age: 24,
@@ -82,34 +85,34 @@ let persons = [
     phone: "+787959931789",
   },
 ];
+
 // 2. Create a function that can find the persons less than 30 years old.
 
-// const findByAge = persons.map((person) => {
-//     person.age < 30 ? console.log(person.name): null
-// })
+const findUsersByAge = (age, arrayData) => {
+  return arrayData.filter((obj) => {
+    return obj.age < age
+  })
+}
+
+console.log(findUsersByAge(25, users));
 
 // 3. Create a function that can find the persons who live in the same city.
-let gent = [];
-let brussel = [];
-let Istanbul = [];
 
-const findByCity = persons.map((person) => {
-  if (person.city === "Gent") {
-    gent.push(person)
+
+const findUsersByCity = (city) => {
+  return users.filter((obj) => {
+    return obj.city === city
+  })
 }
-if (person.city === "Brussel") {
-    brussel.push(person)
-}
-if (person.city === "Istanbul") {
-    Istanbul.push(person)
-}
-});
-// console.log(gent);
-// console.log(brussel);
-// console.log(Istanbul);
+
 
 // 4. Create a function that can find the persons who have gmail email.
 
-const findEmail = persons.map((person) => {
-  person.email.endsWith('gmail.com') ? console.log(person) : null;
-})
+const findUsersByEmail = (domein) => {
+  return users.filter((obj) => {
+    return obj.email.includes(domein)
+  })
+}
+
+console.log(findUsersByEmail('gmail'));
+
