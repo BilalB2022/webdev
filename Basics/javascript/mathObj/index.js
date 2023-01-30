@@ -32,4 +32,35 @@ const dice2Random = Math.round(Math.random()*5) // 0-5
 console.log(`Dice1: ${diceRoll.dice1[dice1Random]}\nDice2: ${diceRoll.dice2[dice2Random]}`)
 // console.log(app)
 
+const  dice1text = document.getElementById('dice1')
+const  dice2text = document.getElementById('dice2')
+const  output = document.getElementById('result')
+const winnerGif = document.getElementById('winner')
+let count=0
+
+// Generate random
+
+function DiceRoll(){
+    const dice1Random = Math.round(Math.random()*5+1)
+    const dice2Random = Math.round(Math.random()*5+1)
+
+    dice1text.innerText=`Dice1 ${dice1Random}`
+    dice2text.innerText=`Dice2 ${dice2Random}`
+    if(dice1Random === dice2Random){
+        count++
+        output.innerText='You Win!' + count
+        winnerGif.src="https://media0.giphy.com/media/lnlAifQdenMxW/giphy.gif?cid=6c09b9522fd2zz9nr8ow2cde9i98ldq97ital52i8rbqynv7&rid=giphy.gif&ct=g"
+        winSound.play()
+    }else{
+        winnerGif.src=""
+    }
+    setTimeout(()=>{
+        winnerGif.src=""
+    }, 3000)
+}
+
+function ClickHandler(){
+    DiceRoll()
+}
+
 
