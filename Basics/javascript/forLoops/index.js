@@ -311,9 +311,10 @@ let users2 = [{
 
 for(let x=0;x<users2.length;x++){
     // console.log(users[x].langs[x])
-    // for(let y=0; y<users[x].langs.length;y++){
-    //     console.log(users[x].langs[y])
-    // }
+    for(let y=0; y<users2[x].langs.length;y++){
+        console.log(users2[x].langs[y])
+        console.log(`Email is ${users2[x].email} \n and langs is ${users2[x].langs[y]}`);
+    }
     // users[x].langs.forEach(function(lang){
     //     console.log(lang)
     // })
