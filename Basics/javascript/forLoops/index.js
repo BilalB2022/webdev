@@ -309,17 +309,70 @@ let users2 = [{
     "langs": ['Turkish','Nederlands','French']
   }]
 
-for(let x=0;x<users2.length;x++){
-    // console.log(users[x].langs[x])
-    for(let y=0; y<users2[x].langs.length;y++){
-        console.log(users2[x].langs[y])
-        console.log(`Email is ${users2[x].email} \n and langs is ${users2[x].langs[y]}`);
-    }
-    // users[x].langs.forEach(function(lang){
-    //     console.log(lang)
-    // })
-    users2[x].langs.map(function(lang){
-        console.log(lang)
-    })
+// for(let x=0;x<users2.length;x++){
+//     // console.log(users[x].langs[x])
+//     for(let y=0; y<users2[x].langs.length;y++){
+//         console.log(users2[x].langs[y])
+//         console.log(`Email is ${users2[x].email} \n and langs is ${users2[x].langs[y]}`);
+//     }
+//     // users[x].langs.forEach(function(lang){
+//     //     console.log(lang)
+//     // })
+//     users2[x].langs.map(function(lang){
+//         console.log(lang)
+//     })
 
+// }
+
+let  usernames = ['mohamed','ahmed','bilal','arisha','nina','hande']
+
+// for (let x=0; x < usernames.length; x++){
+//     console.log(`#${x+1} ${usernames[x]}`);
+// }
+
+// For in loop 
+
+// let student = {
+//     name:'john',
+//     email:'john@kusv.com'
+// }
+
+
+// for(let val in student){
+//     console.log(student[val]);   //value of property
+//     console.log(val);   // property > student[property] > property's value
+// }
+
+
+// // first way of extract property value
+// console.log(student.email);
+
+// // second way to extract property value 
+// console.log(student['email']);
+
+// for(let x=0; x<users.length;x++) {
+//     let addresss = users[x].address
+//     // console.log(addresss);                                     /// Classic FOR LOOP ///
+//     for(val in addresss){
+//         console.log(addresss[val]);
+//     }
+//     console.log('\n');
+// }
+
+// for(user in users){
+//     let obj = users[user]
+//     let myAddress = obj.address                        /// FOR IN LOOP ///
+//     for(val in myAddress) {
+//         console.log(myAddress[val]);
+//     }
+//     console.log('\n');
+// }
+
+
+for(let user of usernames){
+    console.log(user);
 }
+for(let user in usernames){
+    console.log(user);
+}
+
