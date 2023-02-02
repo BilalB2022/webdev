@@ -862,7 +862,7 @@ const people = [
 // 10. loop through the array and compare the postalZip of each person to the postalZip and print out the name and postalZip of each person if the postalZip is the same as the postalZip of the person in the array
 let found=[]
 for(let i=0;i<people.length;i++){
-    let getData = people.filter(function(person){
+    let getData = people.filter((person) =>{
         return person.postalZip === people[i].postalZip
     })
     found=getData
