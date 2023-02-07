@@ -65,3 +65,71 @@ fullname,username,email,password
 // UpdateUserById(1,'email','cora@live.be')
 // console.log(users);
 
+// Blog CMS crud
+
+// 1. Create an array 
+const users = [{
+    username : 'admin',
+    password : 'azerty',
+    id: 1,
+}]
+const posts = []
+
+// 2. Create a function that can add new user if username is not exist
+
+const AddNewUser = user => {
+    let userIndex = 0
+    let found = users.map(single_user=>single_user.username === user.username)
+    console.log(found);
+    if(found.includes(true)){
+        console.log('user is exist');
+    }else{
+        console.log('add new user')
+        userIndex = users[users.length-1].id
+        userIndex++
+        user.id = userIndex
+        users.push(user)
+
+    }
+}
+
+AddNewUser({
+    username:'memory',
+    password:'carré'
+})
+console.log(users);
+// 3. Create a function that can login user if user username and password is exist and correct 
+
+const UserAuthentication = (user) => {
+    let isLoggedIn = users.filter(single => single.username === user.username && single.password === user.password)
+    return isLoggedIn.length !== 0? true: false
+}
+
+console.log(UserAuthentication({
+    username:'atlla',
+    password:'carré'
+}))
+
+// 4. Create a function that can create new post if user is login
+
+const CreatePost = (post,userdata) => {
+    let isLoggedIn = UserAuthentication(userdata)
+    if(isLoggedIn){
+        posts.push(post)
+    }else{
+        console.log('User is not logged in please logged in ');
+    }
+}
+
+CreatePost({
+    title:"Lommel",
+    body:'this is new post data'
+},{
+    username:'memory',
+    password:'carré'
+})
+
+console.log(posts);
+// 5. Create a function that can delete post if user is login
+
+// 6. Create a function that can fetch all posts.
