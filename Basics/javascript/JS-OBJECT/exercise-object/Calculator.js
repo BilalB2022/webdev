@@ -1,4 +1,4 @@
-function Calculator(a,b){
+function Calculator(a,b,op){
     this.num1 = a;
     this.num2 = b;
     this.add = function(){
