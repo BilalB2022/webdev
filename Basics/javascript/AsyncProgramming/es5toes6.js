@@ -64,20 +64,32 @@
 // })
 
 const PrintWelcomeMessage = async msg => {
-    let data = await msg      // await for msg data                             \\\\ async with arrow function ////
-    return data
+    try {
+        let data = await msg  // await for msg data
+    //    throw Error()  // for forcing try catch block to print error
+        return data
+    } catch (error) {
+        console.log(error,"something goes wrong !!!!");
+    }
 }
 
-// console.log(PrintWelcomeMessage('Hello'));
+
+// Catch block 
 
 const ChangeToUpper = (str) => {
     let changing = str.toUpperCase()
     console.log(changing);
+    return changing
 }
 
 PrintWelcomeMessage('Hello')
-    .then(x => {
-        let newValue = x += ' World'
-        return newValue
-    })
-    .then(ChangeToUpper)
+.then(x => {
+    let newValue = x += ' World'
+    return newValue
+})
+.then(ChangeToUpper)
+.catch(error=>console.log(error))  // handle
+.finally(()=>{
+    console.log('I\'m done');
+})
+
