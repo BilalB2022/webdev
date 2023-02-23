@@ -63,7 +63,7 @@
 //     console.log(c);
 // })
 
-const PrintWelcomeMessage = async msg => {
+const PrintWelcomeMessage = async msg => {                                   // \\\\ arrow async function ////
     try {
         let data = await msg  // await for msg data
     //    throw Error()  // for forcing try catch block to print error
