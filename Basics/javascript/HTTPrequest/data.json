@@ -1,0 +1,12 @@
+{
+    "database": [{
+        "id":1,
+        "title":"javascript",
+        "body":"API is cool"
+    },
+    {
+        "id":2,
+        "title":"Node.js",
+        "body":"API is cool"
+    }]
+}
