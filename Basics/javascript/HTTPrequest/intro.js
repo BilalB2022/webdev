@@ -35,7 +35,10 @@ COMMAND > json-sever data.json --watch
 //         console.log(data,'url query');
 //     })
 
-//  Use fetch in async function
+
+//  Use fetch in async function !!!!!!!!!!!!!!!
+
+//   METHOD "GET" DON'T NEED SECONDE ARGUMENT IN FETCH
 
 const GetData = async (id) => {
     let response = await fetch('http://localhost:3000/database/' + id)
@@ -60,6 +63,7 @@ const newData = {
     body: 'python is easy language'
 }
 
+//   METHOD "POST" NEED SECONDE ARGUMENT IN FETCH
 
 const AddClickHandler = () =>{
     fetch('http://localhost:3000/database', {
@@ -73,6 +77,8 @@ const AddClickHandler = () =>{
             console.log(data, 'Saved');
         })
 }
+
+//   METHOD "DELETE" WITH SECONDE ARGUMENT IN FETCH
 
 const DeleteHandler = () =>{
     console.log('testing');
@@ -90,7 +96,8 @@ const newObjectData = {
     body:"This so cool"
 }
 
-// UPDATE
+//   METHOD "PATCH" FOR UPDATE DATA , WITH SECONDE ARGUMENT IN FETCH
+
 const UpdateHandler = () =>{
     fetch('http://localhost:3000/database/' + DataID.value, {
         method: 'PATCH',

@@ -18,24 +18,26 @@
     <div class="mb-3">
       <label for="" class="form-label">Username</label>
       <input type="text"
-        class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+        class="form-control" name="" id="username" aria-describedby="helpId" placeholder="">
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Your Comment</label>
-      <textarea class="form-control" name="" id="" rows="3"></textarea>
+      <textarea class="form-control" name="" id="comment" rows="3"></textarea>
     </div>
-    <a name="" id="" class="btn btn-primary" href="#" role="button">Add Comment</a>
+    <a name="" id="" class="btn btn-primary" onclick="AddCommentHandler()" href="#" role="button">Add Comment</a>
     <div class="comments">
+        <h4>Comments</h4>
         <!-- Some borders are removed -->
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" id="commentList">
+            <!-- <li class="list-group-item">Item</li>
             <li class="list-group-item">Item</li>
             <li class="list-group-item">Item</li>
             <li class="list-group-item">Item</li>
-            <li class="list-group-item">Item</li>
-            <li class="list-group-item">Item</li>
+            <li class="list-group-item">Item</li> -->
           </ul>
     </div>
   </div>
+  <script src="app.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
