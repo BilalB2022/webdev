@@ -1,19 +1,16 @@
-//  Comments Application
+const UserNameInput = document.getElementById('username')
+const CommentInput = document.getElementById('comment')
+const ListComms = document.getElementById('listComments')
 
-const InputUsername = document.getElementById('username')
-const TextAreaComment = document.getElementById('comment')
-const CommentList = document.getElementById('commentList')
+console.log(ListComms);
 
-console.log(InputUsername);  // testing
-console.log(TextAreaComment);
-
-const AddCommentHandler = () =>{
+const AddCommentHandler = () => {
     const obj = {
-        username : InputUsername.value ,
-        comment : TextAreaComment.value
+        username : UserNameInput.value,
+        comment : CommentInput.value
     }
-    fetch('http://localhost:3000/database/',{
-        method : 'POST',
+    fetch('http://localhost:3000/database',{
+        method: "POST",
         headers: {
             'Content-Type':'application/json'
         },
@@ -21,19 +18,14 @@ const AddCommentHandler = () =>{
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log(data,'saved')
+        console.log(data,'ok');
     })
 }
+    
 
 fetch('http://localhost:3000/database')
-    .then(respons=>respons.json())
-    .then(allcomments=>{
-        allcomments.map(single_comment=>{
-            // loop the array 
-            console.log(single_comment);  // single object comment from the array
-
-            CommentList.innerHTML += `<li class='list-group-item'>${single_comment.username} <br/> ${single_comment.comment}</li>`
-        })
-    })
-
-//  test > change html content of ul list 
+    .then(res=>res.json())
+    .then(allcomments=>allcomments.map(single_comment=>{
+        console.log(single_comment);
+        ListComms.innerHTML += `<li class='list-group-item'>${single_comment.username}  --  ${single_comment.comment}</li>`
+    }))
