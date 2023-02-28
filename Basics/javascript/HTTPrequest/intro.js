@@ -73,3 +73,36 @@ const AddClickHandler = () =>{
             console.log(data, 'Saved');
         })
 }
+
+const DeleteHandler = () =>{
+    console.log('testing');
+    //  DELETE Request
+    fetch('http://localhost:3000/database/' + DataID.value,{
+        method:"DELETE"
+    })
+    .then(()=>{
+        console.log('deleted');
+    })
+}
+
+const newObjectData = {
+    title:"golang",
+    body:"This so cool"
+}
+
+// UPDATE
+const UpdateHandler = () =>{
+    fetch('http://localhost:3000/database/' + DataID.value, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json; charset=utf-8'
+            //  sets content type that what data are you sending to machine
+        },
+        // new json data will be stored in body prop's value as string data type
+        body:JSON.stringify(newObjectData) //always as string
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+    })
+}
