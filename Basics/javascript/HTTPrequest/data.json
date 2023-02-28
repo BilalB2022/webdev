@@ -1,12 +1,24 @@
 {
-    "database": [{
-        "id":1,
-        "title":"javascript",
-        "body":"API is cool"
+  "database": [
+    {
+      "id": 1,
+      "title": "javascript",
+      "body": "API is cool"
     },
     {
-        "id":2,
-        "title":"Node.js",
-        "body":"API is cool"
-    }]
+      "id": 2,
+      "title": "React",
+      "body": "API is cool"
+    },
+    {
+      "id": 3,
+      "title": "Java",
+      "body": "API is cool"
+    },
+    {
+      "title": "Python",
+      "body": "python is easy language",
+      "id": 4
+    }
+  ]
 }
