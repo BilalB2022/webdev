@@ -1,6 +1,7 @@
 const deleteBtn = document.getElementById('delete-btn');
 const url = 'http://localhost:3000/post';
 
+
 // Start your backend server before coding the below code.
 // You can use the json-server package to create a fake REST API server.
 // json-server db.json --watch
@@ -13,5 +14,9 @@ const url = 'http://localhost:3000/post';
 function deleteAllPosts(){
     console.log('Deleting all posts...');
     // delete one by one
+    fetch(url,{
+        method:"DELETE",
+    })
+    .then()
    
 }
