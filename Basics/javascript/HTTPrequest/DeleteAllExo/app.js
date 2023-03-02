@@ -1,5 +1,5 @@
 const deleteBtn = document.getElementById('delete-btn');
-const url = 'http://localhost:3000/post';
+const url = 'http://localhost:8000/database';
 
 
 // Start your backend server before coding the below code.
@@ -14,9 +14,19 @@ const url = 'http://localhost:3000/post';
 function deleteAllPosts(){
     console.log('Deleting all posts...');
     // delete one by one
-    fetch(url,{
-        method:"DELETE",
-    })
-    .then()
+    fetch(url)
+        .then(res=>res.json())
+        .then(data=>{
+            data.map(comment=>{
+                console.log('deleting ' + comment.id)
+                console.log(comment.id)
+                fetch(`http://localhost:8000/database/${comment.id}`,{
+                    method:'DELETE'
+                })
+                .then(()=>{
+                    console.log('done')
+                })
+            })
+        })
    
 }
