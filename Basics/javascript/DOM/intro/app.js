@@ -3,20 +3,25 @@
 var result;
 
 // document
-result = document;
-result = document.all; // returns object collection
-result = document['all'];
-result = document.body.children[0];
-result.innerText="Hello Javascript"; // insert text into p1 html element
-result = document.head.children;
-result = document.location; // information about current url
-result = document.characterSet // return charset type
-result = document.scripts;
-result = document.forms;
+// result = document;
+// result = document.all; // returns object collection
+// result = document['all'];
+// result = document.body.children[0];
+// result.innerText = "My intelect"; // insert text into p1 html element
+// result = document.head.children;
+// result = document.location; // information about current url
+// result = document.characterSet // return charset type
+// result = document.scripts;
+// result = document.forms;
+// console.log(result);
+
+// document.forms.forEach(form => {
+//     console.log(form);
+// })
 
 // document.forms.forEach(form=>{
-//     console.log(form)
-// })
+//     console.log(form)              
+// })                                      !!!  for itherate the elements in DOM it doesn't work with "forEach" or "map" ONLY with regular for loops 
 // document.forms.map(form=>{
 //     console.log(form)
 // })
@@ -28,41 +33,41 @@ result = document.forms;
 //     console.log(x)
 // }
 
-// DOM Methods
-/*
-getElementById(idValue) // single element
-getElementsByTagName('p') // html collection
-getElementsByClassName('btn-danger'); // htmlCollection
-querySelector('cssSelector'); // single element
-querySelectorAll('cssSelector'); // one or many element arraylist
+ // DOM Methods
+ 
+//  getElementById(idValue) // single element
+//  getElementsByTagName('p') // html collection
+//  getElementsByClassName('btn-danger'); // htmlCollection
+//  querySelector('cssSelector'); // single element
+//  querySelectorAll('cssSelector'); // one or many element arraylist
 
-*/
 
-// getElementById
-result = document.getElementById('form1')
+
+// // getElementById
+// result = document.getElementById('form1')
 
 // getElementsByTagName
-result = document.getElementsByTagName('p');
+// result = document.getElementsByTagName('p');
+// // for(let p of result){
+    // //     console.log(p)
+    // //     p.innerText="Linux" // updated all p's content
+    // // }
+    
+    // // getElementsByClassName 
 
-// for(let p of result){
-//     console.log(p)
-//     p.innerText="Linux" // updated all p's content
-// }
+// result = document.getElementsByClassName('first')
 
-// getElementsByClassName 
-result = document.getElementsByClassName('first')
-// for(let p of result){
-//     console.log(p)
-//     p.innerText="Linux" // updated specific p's content
-// }
-
-// querySelector -> one single element. 
-result = document.querySelector('.first');
-result = document.querySelector('#form1');
-result = document.querySelector('form');
-
-// querySelectorAll -> one or more elements
-result = document.querySelectorAll('.first')
-result.forEach(element=>console.log(element))
-
-console.log(result)
+// // for(let p of result){
+    // //     console.log(p)
+    // //     p.innerText="Linux" // updated specific p's content
+    // // }
+    
+    // // querySelector -> one single element. 
+    // result = document.querySelector('.first');
+    // result = document.querySelector('#form1');
+    // result = document.querySelector('form');
+    
+    // // querySelectorAll -> one or more elements
+    // result = document.querySelectorAll('.first')
+    // result.forEach(element=>console.log(element))
+ console.log(result)

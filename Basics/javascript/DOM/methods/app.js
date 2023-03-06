@@ -3,28 +3,31 @@ const liItems = document.querySelectorAll('li.list-group-item:nth-child(even)') 
 
 const ListContainer = document.querySelector('.list-group')
 
-// const TeaElement = document.querySelector('.tea')
+const TeaElement = document.querySelector('.tea')
+// console.log(liItems);
+// liItems.forEach((li,index)=>{              // the second parameter of an forEach is always the index of the loop
+    // console.log(li) // > each li element
+    // className
+    // console.log(li.className)
+    // li.className = "list-group-item bg-info text-light"
+    // li.className="list-group-item bg-dark text-light"
+    // li.innerHTML =`<h1>Item-${index}</h1>` // update content of element or elements
+    // li.innerHTML = `<h1>li ${index}</h1>`
+    //li.innerText = `<h1>hello </h1>` // NO HTML TAGs
+    // li.innerText > only string <p>hello</p>
+// })
 
-// // liItems.forEach((li,index)=>{
-// //     console.log(li) // > each li element
-// //     // className
-// //     console.log(li.className)
-// //     li.className="list-group-item bg-dark text-light"
-// //     li.innerHTML =`<h1>Item-${index}</h1>` // update content of element or elements
-// //   // li.innerText = `<h1>hello </h1>` // NO HTML TAGs
-// //     // li.innerText > only string <p>hello</p>
-// // })
-
-// // classList
+// // // classList
 // liItems.forEach((li,index)=>{
-//   //  console.log(li)
-//     li.classList.add('bg-dark')
-//     li.classList.add('text-light')
-//    // console.log(li.classList.contains('list-group-item'))
+//     // li.classList.add('text-info')
+//     // li.classList.add('bg-dark')
+//     // li.classList.add('text-light')
+//     // console.log(li.classList.contains('list-group-item'))  // That gives you a boolean
 //     // li.classList.remove('coffee')
-//     if(li.classList.contains('coffee')){
-//         li.classList.remove('coffee')
-//     }
+//     // if(li.classList.contains('coffee')){
+//     // li.classList.remove('coffee')
+//     // }
+//         console.log(li)
 // })
 
 // // add new Child into ul list
@@ -42,9 +45,10 @@ const ListContainer = document.querySelector('.list-group')
 // ListContainer.appendChild(liElement)
 
 
-// const g = t => document.createElement(t) // reusable function to create html elements
+const g = t => document.createElement(t) // reusable function to create html elements
 
 // const newTask = g('li');
+// console.log(newTask);
 // newTask.classList.add('list-group-item')
 // newTask.classList.add('bg-primary')
 // newTask.classList.add('text-light')
@@ -71,7 +75,7 @@ const ListContainer = document.querySelector('.list-group')
         </ul>*/
 
 const ParentContainer = document.querySelector('.container')
-const g = t => document.createElement(t)
+// const g = t => document.createElement(t)
 
 const ULContainer = g('ul')
 ULContainer.className = "list-group list-group-flush" // sets className for <ul> element
