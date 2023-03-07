@@ -23,3 +23,4 @@ console.log(ListOfTodos.lastElementChild);
 
 const buttons = document.querySelectorAll("button")
 console.log(buttons);
+console.log(buttons);
